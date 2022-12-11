@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class BoardVO {
 
+
     private int seq;
     private String title;
     private String nickname;

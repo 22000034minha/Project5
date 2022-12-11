@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class DataSourceTest {
+
     @Test
     public void testConnection() {
         ApplicationContext ctx = new FileSystemXmlApplicationContext("file:src/main/webapp/WEB-INF/applicationContext.xml");

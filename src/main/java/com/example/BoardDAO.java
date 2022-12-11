@@ -15,38 +15,18 @@ public class BoardDAO {
 
     @Autowired
     SqlSession sqlSession;
-//    @Autowired
-//    JdbcTemplate jdbcTemplate;
 
     public int insertBoard(BoardVO vo) {
         int result = sqlSession.insert("Board.insertBoard", vo);
         return result;
     }
 
-//    public int insertBoard(BoardVO vo) {
-//        String sql = "insert into Song (title, nickname, singer, album, playtime, genre, comment) values ("
-//                + "" + vo.getTitle() + "," + "" + vo.getNickname() + "," + "" + vo.getSinger() + "," +
-//                "" + vo.getAlbum() + "," + "" + vo.getPlaytime() + "," + "" + vo.getGenre() + "," +
-//                "" + vo.getComment() + ")";
-//        return jdbcTemplate.update(sql);
-//    }
-
-//    public int deleteBoard(int seq) {
-//        String sql = "delete from Song where seq = " + seq;
-//        return jdbcTemplate.update(sql);
-//    }
 
     public int deleteBoard(int seq) {
         int delete = sqlSession.delete("Board.deleteBoard", seq);
         return delete;
     }
 
-//    public int updateBoard(BoardVO vo) {
-//        String sql = "update Song set title=" + vo.getTitle() + "," + "nickname=" + vo.getNickname() + ","
-//                + "singer=" + vo.getSinger() + "," + "album=" + vo.getAlbum() + "," + "playtime=" + vo.getPlaytime() + ","
-//                + "genre=" + vo.getGenre() + "," + "comment=" + vo.getComment();
-//        return jdbcTemplate.update(sql);
-//    }
 
     public int updateBoard(BoardVO vo) {
         int update = sqlSession.update("Board.updateBoard", vo);
@@ -69,20 +49,10 @@ public class BoardDAO {
         }
     }
 
-//    public BoardVO getBoard(int seq) {
-//        String sql = "select * from Song where seq=" + seq;
-//        return jdbcTemplate.queryForObject(sql, new BoardRowMapper());
-//    }
-
     public BoardVO getBoard(int seq) {
         BoardVO one = sqlSession.selectOne("Board.getBoard", seq);
         return one;
     }
-
-//    public List<BoardVO> getBoardList() {
-//        String sql = "select * from Song order by regdate desc";
-//        return jdbcTemplate.query(sql, new BoardRowMapper());
-//    }
 
     public List<BoardVO> getBoardList() {
         List<BoardVO> list = sqlSession.selectList("Board.getBoardList");

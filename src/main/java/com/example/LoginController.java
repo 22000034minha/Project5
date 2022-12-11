@@ -25,18 +25,17 @@ public class LoginController {
             session.removeAttribute("login");
         }
         UserVO loginvo = service.getUser(vo);
-        if ( loginvo != null ){ // 로그인 성공
+        if ( loginvo != null ){
             System.out.println("로그인 성공!");
             session.setAttribute("login", loginvo);
             returnURL = "redirect:/list";
-        }else { // 로그인 실패
+        }else {
             System.out.println("로그인 실패!");
             returnURL = "redirect:/login/login";
         }
         return returnURL;
     }
 
-    // 로그아웃 하는 부분
     @RequestMapping(value="/logout")
     public String logout(HttpSession session) {
         session.invalidate();

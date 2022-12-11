@@ -1,6 +1,11 @@
 package com.example;
 
 public class UserVO {
+
+    private String userid;
+    private String password;
+    private String username;
+
     public String getUserid() {
         return userid;
     }
@@ -8,7 +13,6 @@ public class UserVO {
     public void setUserid(String userid) {
         this.userid = userid;
     }
-
     public String getPassword() {
         return password;
     }
@@ -24,9 +28,4 @@ public class UserVO {
     public void setUsername(String username) {
         this.username = username;
     }
-
-    private String userid;
-    private String password;
-    private String username;
-
 }

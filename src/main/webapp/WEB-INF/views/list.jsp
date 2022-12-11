@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: insu_park
-  Date: 2022/12/03
-  Time: 11:13 PM
-  To change this template use File | Settings | File Templates.
---%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
@@ -43,6 +36,8 @@
 </head>
 <body>
 <h1>CCM 리스트</h1>
+<br/><a href="add">Add New Song</a><br/><a href="login/logout">logout</a><br/>
+
 <table id="list" width="90%">
 <tr>
     <th>Id</th>
@@ -74,8 +69,6 @@
     </tr>
 </c:forEach>
 </table>
-
-<br/><a href="add">Add New Song</a>
 
 </body>
 </html>

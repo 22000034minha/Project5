@@ -10,6 +10,7 @@ import java.util.List;
 
 @Controller
 public class HomeController {
+
     @RequestMapping("/")
     public String index(){
         System.out.println("request index");

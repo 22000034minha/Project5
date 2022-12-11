@@ -3,6 +3,7 @@ package com.example;
 import java.util.List;
 
 public interface BoardService {
+
     public int insertBoard(BoardVO vo);
     public int deleteBoard(int seq);
     public int updateBoard(BoardVO vo);
